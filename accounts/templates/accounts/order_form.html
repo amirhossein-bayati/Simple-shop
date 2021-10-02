@@ -1,0 +1,46 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <span class="anchor" id="formLogin"></span>
+
+                        <!-- form card login with validation feedback -->
+                        <div class="card card-outline-secondary">
+                            <div class="card-header">
+                                <h3 class="mb-0">Create Order</h3>
+                            </div>
+                            <div class="card-body">
+                                <form class="form" role="form" autocomplete="off" id="loginForm" method="POST">
+                                    {{ form.as_p }}
+                                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin"
+                                            name="submit">
+                                        Submit
+                                    </button>
+                                    {% csrf_token %}
+                                </form>
+                            </div>
+                            <!--/card-body-->
+                        </div>
+                        <!-- /form card login -->
+
+                    </div>
+
+                </div>
+                <!--/row-->
+
+            </div>
+            <!--/col-->
+        </div>
+        <!--/row-->
+
+
+    </div>
+    <!--/container-->
+
+
+{% endblock %}
